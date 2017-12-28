@@ -1,0 +1,40 @@
+.gradle
+/build/
+/classes/
+!gradle/wrapper/gradle-wrapper.jar
+/out/
+# Ignore Gradle GUI config
+gradle-app.setting
+
+/bin/
+.classpath
+.idea/
+.project
+.settings/
+
+.DS_Store
+.java-version
+/.DS_Store/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
