@@ -14,18 +14,17 @@ public class EmailService {
 
     private static final String HOST = "smtp.gmail.com";
 
-    private static final String TO_ADDRESS = "spasupuleti@nisum.com";
     private static final String FROM_ADDRESS = "noreplykafka@gmail.com";
 
     private static final String NO_REPLY_123 = "noreply@123";
-    private static final String SUBJECT = "This is Kafka poc!";
-    private static final String TEXT = "Hello! I am FROM_ADDRESS Kafka!!";
+    private static final String SUBJECT = "Welcome!";
+    private static final String TEXT = "Hello! Welcome to Nisum!!";
     private static final String PROTOCOL = "smtp";
 
     @Autowired
     private JavaMailSender sender;
 
-    public void sendMail() {
+    public void sendMail(String toAddress) {
 
         Properties props = System.getProperties();
 
@@ -49,7 +48,7 @@ public class EmailService {
             message.setFrom(new InternetAddress(FROM_ADDRESS));
 
             message.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse(TO_ADDRESS));
+                    InternetAddress.parse(toAddress));
             message.setSubject(SUBJECT);
 
             message.setText(TEXT);

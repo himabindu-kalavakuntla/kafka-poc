@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '1.5.2.RELEASE'
+		springBootVersion = '1.4.7.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -22,14 +22,15 @@ repositories {
 	mavenCentral()
 }
 
-
 ext {
 	springCloudVersion = 'Edgware.RELEASE'
 }
 
 dependencies {
 	compile('org.springframework.cloud:spring-cloud-stream-binder-kafka')
+	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.kafka:spring-kafka')
 	compile('org.apache.kafka:kafka-clients:0.10.0.1')
 	compile("org.projectlombok:lombok:1.16.14")
 	compile("javax.mail:mail:1.4.1")

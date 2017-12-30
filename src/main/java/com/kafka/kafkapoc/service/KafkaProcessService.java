@@ -32,7 +32,7 @@ public class KafkaProcessService {
 
        kafkaPublisher.sendMessage(userEnrollment.toString());
        kafkaSubscriber.run();
-       emailService.sendMail();
+       emailService.sendMail(userEnrollment.getEmailAddress());
        return "success";
     }
 }
