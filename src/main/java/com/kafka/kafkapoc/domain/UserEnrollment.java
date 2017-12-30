@@ -17,7 +17,6 @@ public class UserEnrollment {
     private String lastName;
     private String phoneNumber;
     private String emailAddress;
-    private String ssn;
 
     private String signedOnHarrassementPolicy;
     private String signedOnEmployeeAgreement;

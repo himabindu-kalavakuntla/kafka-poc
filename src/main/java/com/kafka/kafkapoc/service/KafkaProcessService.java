@@ -28,11 +28,11 @@ public class KafkaProcessService {
 
        userEnrollmentRepository.save(userEnrollment);
        List<UserEnrollment> userEnrollmentaa = userEnrollmentRepository.findAll();
-       System.out.println(" from repository size:: "+userEnrollmentaa.size());
+       System.out.println(" fromAddress repository size:: "+userEnrollmentaa.size());
 
        kafkaPublisher.sendMessage(userEnrollment.toString());
        kafkaSubscriber.run();
-       // emailService.sendMail();
-        return "success";
+       emailService.sendMail();
+       return "success";
     }
 }

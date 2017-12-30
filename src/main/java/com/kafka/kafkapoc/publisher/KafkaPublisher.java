@@ -1,6 +1,5 @@
 package com.kafka.kafkapoc.publisher;
 
-import com.kafka.kafkapoc.domain.UserEnrollment;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
