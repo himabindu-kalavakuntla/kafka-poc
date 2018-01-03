@@ -12,6 +12,7 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
 group = 'com.kafka'
@@ -30,7 +31,11 @@ dependencies {
 	compile('org.springframework.cloud:spring-cloud-stream-binder-kafka')
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.springframework.kafka:spring-kafka')
+
+    // <!-- Add freemarker template support -->
+    compile('org.springframework.boot:spring-boot-starter-freemarker')
+
+    compile('org.springframework.kafka:spring-kafka')
 	compile('org.apache.kafka:kafka-clients:0.10.0.1')
 	compile("org.projectlombok:lombok:1.16.14")
 	compile("javax.mail:mail:1.4.1")

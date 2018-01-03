@@ -35,4 +35,8 @@ public class KafkaProcessService {
        emailService.sendMail(userEnrollment.getEmailAddress());
        return "success";
     }
+
+    public List<UserEnrollment> getAllEmployees() {
+        return userEnrollmentRepository.findAll();
+    }
 }
