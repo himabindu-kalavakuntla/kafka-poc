@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.*;
@@ -24,7 +25,7 @@ public class EmailService {
     @Autowired
     private JavaMailSender sender;
 
-    public void sendMail(String toAddress) {
+    public void sendMail(String toAddresses) {
 
         Properties props = System.getProperties();
 
@@ -48,7 +49,7 @@ public class EmailService {
             message.setFrom(new InternetAddress(FROM_ADDRESS));
 
             message.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse(toAddress));
+                    InternetAddress.parse(toAddresses));
             message.setSubject(SUBJECT);
 
             message.setText(TEXT);

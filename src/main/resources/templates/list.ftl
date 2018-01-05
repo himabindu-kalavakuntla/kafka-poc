@@ -1,7 +1,7 @@
-<div class="generic-container">
+<div class="generic-container" width="100%" height="100%">
     <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading"><span class="lead">Specific User </span></div>
+        <div class="panel-heading"><span class="lead">Add Employee </span></div>
         <div class="panel-body">
             <div class="formcontainer">
                 <div class="alert alert-success" role="alert" ng-if="ctrl.successMessage">{{ctrl.successMessage}}</div>
@@ -34,7 +34,63 @@
                             <label class="col-md-2 control-lable" for="phoneNumber">Phone Number</label>
                             <div class="col-md-7">
                                 <input type="text" ng-model="ctrl.user.phoneNumber" id="phoneNumber" class="form-control input-sm"
-                                 placeholder="Enter your phone number." required ng-pattern="ctrl.onlyNumbers"/>
+                                 placeholder="Enter your phone number" required ng-pattern="ctrl.onlyNumbers"/>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-2 control-lable" for="emailAddress">Email</label>
+                            <div class="col-md-7">
+                                <input type="email" ng-model="ctrl.user.emailAddress" id="emailAddress" class="form-control
+                                input-sm"
+                                 placeholder="Enter your Email" required/>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-2 control-lable" for="signedOnHarrassementPolicy">Signup for
+                            Harrassement Policy</label>
+                            <div class="col-md-7">
+                                <input type="text" ng-model="ctrl.user.signedOnHarrassementPolicy" id="signedOnHarrassementPolicy" class="form-control input-sm"
+                                 placeholder="Enter Yes or No" required/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-2 control-lable" for="signedOnEmployeeAgreement">Signup for
+                            Employee Agreement</label>
+                            <div class="col-md-7">
+                                <input type="text" ng-model="ctrl.user.signedOnEmployeeAgreement" id="signedOnEmployeeAgreement" class="form-control input-sm"
+                                 placeholder="Enter Yes or No" required/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-2 control-lable" for="enrolledForMedicalInsurance">Enroll For Medical Insurance</label>
+                            <div class="col-md-7">
+                                <input type="text" ng-model="ctrl.user.enrolledForMedicalInsurance" id="enrolledForMedicalInsurance" class="form-control input-sm"
+                                 placeholder="Enter Yes or No." required/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-2 control-lable" for="enrolledForBenefits">Enroll For Benefits</label>
+                            <div class="col-md-7">
+                                <input type="text" ng-model="ctrl.user.enrolledForBenefits" id="enrolledForBenefits" class="form-control input-sm"
+                                 placeholder="Enter Yes or No." required/>
                             </div>
                         </div>
                     </div>
@@ -66,8 +122,7 @@
                         <th>Signed On Employee Agreement</th>
                         <th>Enrolled For Medical Insurance</th>
                         <th>Enrolled For Benefits</th>
-                        <th width="100"></th>
-                        <th width="100"></th>
+
                     </tr>
                     </thead>
                     <tbody>

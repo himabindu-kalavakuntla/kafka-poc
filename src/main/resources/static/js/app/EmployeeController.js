@@ -18,6 +18,7 @@ angular.module('crudApp').controller('EmployeeController',
 
         self.onlyIntegers = /^\d+$/;
         self.onlyNumbers = /^\d+([,.]\d+)?$/;
+        //self.emailOnly = = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
 
         function submit() {
             console.log('Submitting');
